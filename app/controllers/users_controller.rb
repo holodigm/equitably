@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @json = Location.all.to_gmaps4rails
+    puts @json
 
     respond_to do |format|
       format.html # index.html.erb
